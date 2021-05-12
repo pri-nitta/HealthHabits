@@ -1,14 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/isabeline"
     tools:context=".CreateHabitsItem">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
 
-</FrameLayout>
+        <LinearLayout
+            android:id="@+id/ll_textviews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_habitTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="@color/morning_blue"
+                android:hint="@string/habit_title"
+                android:fontFamily="@font/st_marie_regular"
+                android:inputType="text"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/et_habitDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="@color/morning_blue"
+                android:fontFamily="@font/st_marie_regular"
+                android:hint="@string/give_it_a_short_description"
+                android:inputType="textShortMessage"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btn_pickDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/round_button"
+                android:backgroundTint="@color/black_coral"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/archistico_bold"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:text="@string/pick_a_date"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/tv_dateSelected"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/st_marie_regular"
+                android:text="@string/date_not_selected"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btn_pickTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/round_button"
+                android:backgroundTint="@color/black_coral"
+                android:fontFamily="@font/archistico_bold"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:text="@string/pick_a_time"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/tv_timeSelected"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/st_marie_regular"
+                android:text="@string/time_not_selected"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/layout_tea_smoking_fastfood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_teaSelected"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/tea_selected" />
+
+                <ImageView
+                    android:id="@+id/iv_fastFoodSelected"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/fastfood_selected" />
+
+                <ImageView
+                    android:id="@+id/iv_smokingSelected"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/smoke_selected" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/round_button"
+                android:backgroundTint="@color/indian_red"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/archistico_bold"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:text="@string/confirm"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
