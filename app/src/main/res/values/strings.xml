@@ -13,4 +13,5 @@
     <string name="pick_a_time">Pick a time</string>
     <string name="time_not_selected">Time: (not selected)</string>
     <string name="confirm">Confirm</string>
+    <string name="icon">icon</string>
 </resources>
