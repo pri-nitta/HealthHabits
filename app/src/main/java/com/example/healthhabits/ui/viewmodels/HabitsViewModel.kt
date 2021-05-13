@@ -39,7 +39,7 @@ class HabitsViewModel(application: Application): AndroidViewModel(application){
     }
 
 
-    fun deleteAllHabit(habit: Habit){
+    fun deleteAllHabit(){
         viewModelScope.launch(Dispatchers.IO) {
             repository.deleteAllHabit()
         }
