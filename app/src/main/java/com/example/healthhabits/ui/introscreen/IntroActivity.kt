@@ -25,28 +25,27 @@ class IntroActivity : AppCompatActivity() {
 
         circleIndicator.setViewPager(viewPager2)
 
-        viewPager2.unregisterOnPageChangeCallback(object: ViewPager2.OnPageChangeCallback(){
+        viewPager2.unregisterOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageScrolled(
                 position: Int,
                 positionOffset: Float,
                 positionOffsetPixels: Int
             ) {
-                if (position == 2){
+                if (position == 2) {
                     animationButton()
                 }
-
                 super.onPageScrolled(position, positionOffset, positionOffsetPixels)
             }
         })
     }
 
-    private fun animationButton(){
+    private fun animationButton() {
         btn_start_app.visibility = View.VISIBLE
-        btn_start_app.animate().apply{
+        btn_start_app.animate().apply {
             duration = 1400
             alpha(1f)
 
-            btn_start_app.setOnClickListener{
+            btn_start_app.setOnClickListener {
                 val i = Intent(applicationContext, MainActivity::class.java)
                 startActivity(i)
                 finish()
@@ -54,11 +53,11 @@ class IntroActivity : AppCompatActivity() {
         }.start()
     }
 
-    private fun addToIntroView(){
+    private fun addToIntroView() {
         introView = listOf(
-            IntroView("Welcome to Habit Tracker!", R.drawable.ic_baseline_emoji_food_beverage_24),
-            IntroView("This is the second page", R.drawable.ic_baseline_smoke_free_24),
-            IntroView("This is the final page", R.drawable.ic_baseline_fastfood_24)
+            IntroView(getString(R.string.page_1), R.drawable.ic_groovysittingdoodle),
+            IntroView(getString(R.string.page_2), R.drawable.ic_zombieingdoodle),
+            IntroView(getString(R.string.page_3), R.drawable.ic_readingdoodle)
         )
     }
 }

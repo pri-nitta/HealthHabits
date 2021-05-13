@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HealthHabits</string>
+    <string name="app_name">Health Habits</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_big">Title Big</string>
@@ -15,4 +15,7 @@
     <string name="confirm">Confirm</string>
     <string name="icon">icon</string>
     <string name="start_making_new_habits">Start making new habits!</string>
+    <string name="page_1">Welcome to Health Habits!</string>
+    <string name="page_2">Here you can add and track your habits ✌</string>
+    <string name="page_3">You are able add a day and hour to start them and do a proper follow up! 😀</string>
 </resources>

@@ -18,7 +18,7 @@
     android:layout_height="48dp"
     android:layout_alignParentBottom="true"
     android:layout_centerInParent="true"
-    android:background="@color/black_coral"
+    android:background="@color/morning_blue"
     android:foregroundTint="@android:color/black" />
 
 <Button

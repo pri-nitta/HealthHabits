@@ -38,7 +38,7 @@ class CreateHabitsItem : Fragment(R.layout.fragment_create_habits_item),
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         habitViewModel = ViewModelProvider(this).get(HabitsViewModel::class.java)
         btn_confirm.setOnClickListener {
-            //addHabitToDB()
+            addHabitToDB()
         }
 
         pickDateAndTime()
@@ -47,19 +47,19 @@ class CreateHabitsItem : Fragment(R.layout.fragment_create_habits_item),
 
     }
 
-    private fun addHabitToDB(){
+    private fun addHabitToDB() {
         title = et_habitTitle.text.toString()
         description = et_habitDescription.text.toString()
         timeStamp = "$cleanDate $cleanTime"
 
-        if (!(title.isEmpty() || description.isEmpty() || timeStamp.isEmpty() || drawableSelected == 0 )){
+        if (!(title.isEmpty() || description.isEmpty() || timeStamp.isEmpty() || drawableSelected == 0)) {
             val habit = Habit(0, title, description, timeStamp, drawableSelected)
 
             habitViewModel.addHabit(habit)
             Toast.makeText(context, "Habit added successfully", Toast.LENGTH_SHORT).show()
 
             findNavController().navigate(R.id.action_createHabitsItem_to_habitList)
-        }else{
+        } else {
             Toast.makeText(context, "Please find all the fields", Toast.LENGTH_SHORT).show()
         }
     }

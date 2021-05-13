@@ -14,6 +14,9 @@
             android:id="@+id/action_habitList_to_createHabitsItem"
             app:destination="@id/createHabitsItem" />
         <action
+            android:id="@+id/action_habitList_to_createHabitItem2"
+            app:destination="@id/createHabitsItem" />
+        <action
             android:id="@+id/action_habitList_to_updateHabitsItem"
             app:destination="@id/updateHabitsItem" />
     </fragment>
@@ -33,7 +36,8 @@
         tools:layout="@layout/fragment_update_habits_item" >
         <action
             android:id="@+id/action_updateHabitsItem_to_habitList"
-            app:destination="@id/habitList" />
+            app:destination="@id/habitList"
+            app:exitAnim="@anim/fragment_close_exit"/>
         <argument
             android:name="selectedHabit"
             app:argType="com.example.healthhabits.data.models.Habit" />
